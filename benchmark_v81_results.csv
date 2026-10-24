@@ -1,0 +1,101 @@
+drug,disease,label,group,prediction_score,prediction_strength,full_score,full_strength,target_overlap_count,max_target_association,overlapping_targets,publication_count,abstracts_analyzed,supportive_count,negative_count,unclear_count,clinical_stage,clinical_reports,drug_id,disease_id
+trastuzumab,breast cancer,1,known,55,Moderate,90,Strong,1,0.8322,ERBB2,732071,10,2,0,8,APPROVAL,745,CHEMBL1201585,MONDO_0007254
+imatinib,chronic myeloid leukemia,1,known,77,Strong,100,Strong,4,0.8358,ABL1; BCR; KIT; PDGFRB,89607,10,5,0,5,APPROVAL,103,CHEMBL941,MONDO_0011996
+osimertinib,non-small cell lung carcinoma,1,known,60,Moderate,95,Strong,1,0.8884,EGFR,231207,10,8,2,0,APPROVAL,256,CHEMBL3353410,MONDO_0005233
+rituximab,non-Hodgkin lymphoma,1,known,54,Moderate,89,Strong,1,0.6347,MS4A1,115962,10,7,1,2,APPROVAL,307,CHEMBL1201576,MONDO_0018908
+levodopa,Parkinson disease,1,known,54,Moderate,89,Strong,1,0.6311,DRD3,336432,10,4,0,6,APPROVAL,196,CHEMBL1009,MONDO_0005180
+donepezil,Alzheimer disease,1,known,55,Moderate,90,Strong,1,0.6416,ACHE,430541,10,4,0,6,APPROVAL,74,CHEMBL502,MONDO_0004975
+adalimumab,rheumatoid arthritis,1,known,58,Moderate,93,Strong,1,0.7164,TNF,273698,10,4,0,6,APPROVAL,164,CHEMBL1201580,MONDO_0008383
+insulin,type 1 diabetes mellitus,1,known,41,Limited,73,Moderate,1,0.6303,INSR,170578,10,2,1,7,PHASE_3,157,CHEMBL1201631,MONDO_0005147
+sildenafil,pulmonary arterial hypertension,1,known,39,Limited,68,Moderate,1,0.6095,PDE5A,126919,10,3,2,5,PHASE_3,20,CHEMBL192,MONDO_0015924
+tamoxifen,breast cancer,1,known,61,Moderate,96,Strong,1,0.8587,ESR1,796663,10,3,0,7,APPROVAL,212,CHEMBL83,MONDO_0007254
+metformin,type 2 diabetes mellitus,1,known,73,Moderate,100,Strong,51,0.7094,GPD2; NDUFS4; MT-ND1; NDUFB8; NDUFB2,576349,10,4,0,6,APPROVAL,549,CHEMBL1431,MONDO_0005148
+atorvastatin,hypercholesterolemia,1,known,64,Moderate,99,Strong,1,0.7488,HMGCR,107739,10,9,0,1,APPROVAL,69,CHEMBL1487,HP_0003124
+omeprazole,gastroesophageal reflux disease,1,known,51,Moderate,86,Strong,2,0.6099,ATP4A; ATP4B,91094,10,4,1,5,APPROVAL,122,CHEMBL1503,MONDO_0007186
+sertraline,major depressive disorder,1,known,59,Moderate,94,Strong,1,0.6366,SLC6A4,877514,10,5,0,5,APPROVAL,103,CHEMBL809,MONDO_0002009
+fluoxetine,major depressive disorder,1,known,59,Moderate,94,Strong,1,0.6366,SLC6A4,891530,10,5,0,5,APPROVAL,75,CHEMBL41,MONDO_0002009
+lisinopril,hypertension,1,known,60,Moderate,95,Strong,1,0.7547,ACE,928748,10,4,0,6,APPROVAL,103,CHEMBL419213,MONDO_0005044
+amlodipine,hypertension,1,known,68,Moderate,100,Strong,4,0.7433,CACNA1D; CACNA1C; CACNA1S; CACNA1F,936356,10,4,0,6,APPROVAL,241,CHEMBL1491,MONDO_0005044
+apixaban,atrial fibrillation,1,known,46,Limited,78,Strong,1,0.6325,F10,236204,10,2,0,8,APPROVAL,46,CHEMBL231779,MONDO_0004981
+pembrolizumab,melanoma,1,known,58,Moderate,93,Strong,1,0.6293,PDCD1,327719,10,6,0,4,APPROVAL,233,CHEMBL3137343,MONDO_0005105
+nivolumab,melanoma,1,known,58,Moderate,93,Strong,1,0.6293,PDCD1,320646,10,6,0,4,APPROVAL,239,CHEMBL2108738,MONDO_0005105
+gefitinib,non-small cell lung carcinoma,1,known,65,Moderate,100,Strong,1,0.8884,EGFR,247058,10,9,1,0,APPROVAL,182,CHEMBL939,MONDO_0005233
+erlotinib,non-small cell lung carcinoma,1,known,70,Moderate,100,Strong,1,0.8884,EGFR,247093,10,10,0,0,APPROVAL,309,CHEMBL553,MONDO_0005233
+vemurafenib,melanoma,1,known,68,Moderate,100,Strong,1,0.8533,BRAF,286027,10,6,0,4,APPROVAL,81,CHEMBL1229517,MONDO_0005105
+dabrafenib,melanoma,1,known,68,Moderate,100,Strong,1,0.8533,BRAF,283918,10,6,0,4,APPROVAL,74,CHEMBL2028663,MONDO_0005105
+olaparib,ovarian cancer,1,known,64,Moderate,99,Strong,3,0.6254,PARP1; PARP2; PARP3,195691,10,6,0,4,APPROVAL,87,CHEMBL521686,MONDO_0008170
+letrozole,breast cancer,1,known,47,Limited,82,Strong,1,0.636,CYP19A1,739027,10,2,0,8,APPROVAL,396,CHEMBL1444,MONDO_0007254
+anastrozole,breast cancer,1,known,47,Limited,82,Strong,1,0.636,CYP19A1,733591,10,2,0,8,APPROVAL,242,CHEMBL1399,MONDO_0007254
+methotrexate,rheumatoid arthritis,1,known,54,Moderate,89,Strong,1,0.6183,DHFR,356833,10,4,0,6,APPROVAL,265,CHEMBL34259,MONDO_0008383
+etanercept,rheumatoid arthritis,1,known,58,Moderate,93,Strong,1,0.7164,TNF,268133,10,4,0,6,APPROVAL,127,CHEMBL1201572,MONDO_0008383
+ustekinumab,psoriasis,1,known,51,Moderate,83,Strong,3,0.7994,IL12B; IL23A; IL12A,99245,10,1,1,8,APPROVAL,31,CHEMBL1201835,MONDO_0005083
+secukinumab,psoriasis,1,known,38,Limited,70,Moderate,1,0.6385,IL17A,95943,10,1,1,8,APPROVAL,41,CHEMBL1743068,MONDO_0005083
+dupilumab,atopic dermatitis,1,known,48,Limited,83,Strong,1,0.7009,IL4R,91076,10,4,2,4,APPROVAL,84,CHEMBL2108675,MONDO_0004980
+omalizumab,asthma,1,known,58,Moderate,93,Strong,1,0.6291,IGHE,331002,10,7,0,3,APPROVAL,56,CHEMBL1201589,MONDO_0004979
+montelukast,asthma,1,known,58,Moderate,93,Strong,1,0.6234,CYSLTR1,329244,10,7,0,3,APPROVAL,97,CHEMBL787,MONDO_0004979
+salbutamol,asthma,1,known,59,Moderate,94,Strong,1,0.6341,ADRB2,343770,10,7,0,3,APPROVAL,109,CHEMBL714,MONDO_0004979
+sumatriptan,migraine,1,known,53,Moderate,88,Strong,2,0.6202,HTR1B; HTR1D,73518,10,3,0,7,APPROVAL,58,CHEMBL128,MONDO_0005277
+topiramate,epilepsy,1,known,79,Strong,100,Strong,25,0.9271,SCN1A; SCN2A; SCN8A; GABRG2; SCN3A,224648,10,3,0,7,APPROVAL,115,CHEMBL220492,MONDO_0005027
+carbamazepine,epilepsy,1,known,79,Strong,100,Strong,9,0.9271,SCN1A; SCN2A; SCN8A; SCN3A; SCN9A,244061,10,3,0,7,APPROVAL,29,CHEMBL108,MONDO_0005027
+valproic acid,epilepsy,1,known,50,Moderate,85,Strong,1,0.633,ALDH5A1,250585,10,3,0,7,APPROVAL,51,CHEMBL109,MONDO_0005027
+lamotrigine,epilepsy,1,known,79,Strong,100,Strong,9,0.9271,SCN1A; SCN2A; SCN8A; SCN3A; SCN9A,225050,10,3,0,7,APPROVAL,123,CHEMBL741,MONDO_0005027
+lithium,bipolar disorder,1,known,55,Moderate,90,Strong,3,0.6149,GSK3B; IMPA1; GSK3A,108342,10,4,1,5,APPROVAL,79,CHEMBL1200826,MONDO_0004985
+quetiapine,schizophrenia,1,known,62,Moderate,97,Strong,3,0.749,DRD2; HTR2A; HTR2C,236463,10,3,0,7,APPROVAL,69,CHEMBL716,MONDO_0005090
+clozapine,schizophrenia,1,known,54,Moderate,89,Strong,2,0.749,DRD2; HTR2A,246900,10,3,1,6,APPROVAL,62,CHEMBL42,MONDO_0005090
+haloperidol,schizophrenia,1,known,69,Moderate,100,Strong,4,0.749,DRD2; DRD3; DRD4; HTR2A,251639,10,4,0,6,APPROVAL,40,CHEMBL54,MONDO_0005090
+allopurinol,gout,1,known,56,Moderate,91,Strong,1,0.6979,XDH,49406,10,4,0,6,APPROVAL,83,CHEMBL1467,MONDO_0005393
+colchicine,gout,1,known,71,Moderate,100,Strong,15,0.5872,TUBB; TUBA1B; TUBB4B; TUBB1; TUBA3C,66552,10,6,0,4,APPROVAL,21,CHEMBL107,MONDO_0005393
+febuxostat,gout,1,known,56,Moderate,88,Strong,1,0.6979,XDH,37165,10,4,0,6,APPROVAL,49,CHEMBL1164729,MONDO_0005393
+levothyroxine,hypothyroidism,1,known,71,Moderate,100,Strong,2,0.8379,THRA; THRB,98909,10,5,0,5,APPROVAL,45,CHEMBL1624,MONDO_0005420
+prednisone,asthma,1,known,59,Moderate,94,Strong,1,0.6342,NR3C1,402228,10,7,0,3,APPROVAL,66,CHEMBL635,MONDO_0004979
+azathioprine,Crohn disease,1,known,42,Limited,74,Moderate,1,0.5771,PPAT,151422,10,4,2,4,APPROVAL,22,CHEMBL1542,MONDO_0005011
+trastuzumab,atrial fibrillation,0,mismatched_control,18,Weak,18,Weak,0,0,,226404,10,2,0,8,,0,CHEMBL1201585,MONDO_0004981
+imatinib,melanoma,0,mismatched_control,65,Moderate,83,Strong,2,0.7178,KIT; PDGFRB,308123,10,7,0,3,PHASE_2,7,CHEMBL941,MONDO_0005105
+osimertinib,melanoma,0,mismatched_control,49,Limited,69,Moderate,1,0.524,EGFR,286672,10,7,1,2,PHASE_3,1,CHEMBL3353410,MONDO_0005105
+rituximab,non-small cell lung carcinoma,0,mismatched_control,25,Limited,25,Limited,0,0,,267041,10,8,1,1,,0,CHEMBL1201576,MONDO_0005233
+levodopa,non-small cell lung carcinoma,0,mismatched_control,30,Limited,30,Limited,0,0,,264062,10,10,0,0,,0,CHEMBL1009,MONDO_0005233
+donepezil,melanoma,0,mismatched_control,30,Limited,30,Limited,0,0,,288898,10,6,0,4,,0,CHEMBL502,MONDO_0005105
+adalimumab,melanoma,0,mismatched_control,30,Limited,30,Limited,0,0,,299040,10,6,0,4,,0,CHEMBL1201580,MONDO_0005105
+insulin,ovarian cancer,0,mismatched_control,30,Limited,30,Limited,0,0,,184531,10,6,0,4,,0,CHEMBL1201631,MONDO_0008170
+sildenafil,breast cancer,0,mismatched_control,18,Weak,18,Weak,0,0,,741922,10,2,0,8,,0,CHEMBL192,MONDO_0007254
+tamoxifen,rheumatoid arthritis,0,mismatched_control,26,Limited,26,Limited,0,0,,320009,10,4,0,6,,0,CHEMBL83,MONDO_0008383
+metformin,rheumatoid arthritis,0,mismatched_control,26,Limited,41,Limited,0,0,,342406,10,4,0,6,PHASE_2,3,CHEMBL1431,MONDO_0008383
+atorvastatin,rheumatoid arthritis,0,mismatched_control,26,Limited,41,Limited,0,0,,280106,10,4,0,6,PHASE_2,3,CHEMBL1487,MONDO_0008383
+omeprazole,psoriasis,0,mismatched_control,9,Weak,9,Weak,0,0,,108494,10,1,1,8,,0,CHEMBL1503,MONDO_0005083
+sertraline,psoriasis,0,mismatched_control,13,Weak,13,Weak,0,0,,104739,10,2,1,7,,0,CHEMBL809,MONDO_0005083
+fluoxetine,atopic dermatitis,0,mismatched_control,12,Weak,12,Weak,0,0,,113031,10,3,2,5,,0,CHEMBL41,MONDO_0004980
+lisinopril,asthma,0,mismatched_control,30,Limited,30,Limited,0,0,,330644,10,7,0,3,,0,CHEMBL419213,MONDO_0004979
+amlodipine,asthma,0,mismatched_control,30,Limited,30,Limited,0,0,,338252,10,7,0,3,,0,CHEMBL1491,MONDO_0004979
+apixaban,asthma,0,mismatched_control,30,Limited,30,Limited,0,0,,338616,10,7,0,3,,0,CHEMBL231779,MONDO_0004979
+pembrolizumab,migraine,0,mismatched_control,22,Weak,22,Weak,0,0,,121389,10,3,0,7,,0,CHEMBL3137343,MONDO_0005277
+nivolumab,epilepsy,0,mismatched_control,22,Weak,22,Weak,0,0,,255822,10,3,0,7,,0,CHEMBL2108738,MONDO_0005027
+gefitinib,epilepsy,0,mismatched_control,26,Limited,26,Limited,0,0,,237699,10,4,0,6,,0,CHEMBL939,MONDO_0005027
+erlotinib,epilepsy,0,mismatched_control,30,Limited,30,Limited,0,0,,237734,10,5,0,5,,0,CHEMBL553,MONDO_0005027
+vemurafenib,epilepsy,0,mismatched_control,22,Weak,22,Weak,0,0,,221203,10,3,0,7,,0,CHEMBL1229517,MONDO_0005027
+dabrafenib,bipolar disorder,0,mismatched_control,25,Limited,25,Limited,0,0,,116893,10,6,1,3,,0,CHEMBL2028663,MONDO_0004985
+olaparib,schizophrenia,0,mismatched_control,26,Limited,26,Limited,0,0,,237451,10,4,0,6,,0,CHEMBL521686,MONDO_0005090
+letrozole,schizophrenia,0,mismatched_control,26,Limited,26,Limited,0,0,,234854,10,4,0,6,,0,CHEMBL1444,MONDO_0005090
+anastrozole,schizophrenia,0,mismatched_control,26,Limited,26,Limited,0,0,,229418,10,4,0,6,,0,CHEMBL1399,MONDO_0005090
+methotrexate,gout,0,mismatched_control,25,Limited,45,Limited,0,0,,140530,10,5,1,4,PHASE_3,3,CHEMBL34259,MONDO_0005393
+etanercept,gout,0,mismatched_control,21,Weak,21,Weak,0,0,,51830,10,3,0,7,,0,CHEMBL1201572,MONDO_0005393
+ustekinumab,gout,0,mismatched_control,21,Weak,21,Weak,0,0,,43528,10,3,0,7,,0,CHEMBL1201835,MONDO_0005393
+secukinumab,hypothyroidism,0,mismatched_control,30,Limited,30,Limited,0,0,,81926,10,8,0,2,,0,CHEMBL1743068,MONDO_0005420
+dupilumab,asthma,0,mismatched_control,64,Moderate,96,Strong,1,0.7468,IL4R,330785,10,7,0,3,APPROVAL,43,CHEMBL2108675,MONDO_0004979
+omalizumab,Crohn disease,0,mismatched_control,30,Limited,30,Limited,0,0,,115623,10,7,0,3,,0,CHEMBL1201589,MONDO_0005011
+montelukast,breast cancer,0,mismatched_control,18,Weak,18,Weak,0,0,,732499,10,2,0,8,,0,CHEMBL787,MONDO_0007254
+salbutamol,chronic myeloid leukemia,0,mismatched_control,30,Limited,30,Limited,0,0,,77197,10,5,0,5,,0,CHEMBL714,MONDO_0011996
+sumatriptan,non-small cell lung carcinoma,0,mismatched_control,25,Limited,25,Limited,0,0,,224383,10,8,1,1,,0,CHEMBL128,MONDO_0005233
+topiramate,non-Hodgkin lymphoma,0,mismatched_control,20,Weak,20,Weak,0,0,,82928,10,6,2,2,,0,CHEMBL220492,MONDO_0018908
+carbamazepine,Parkinson disease,0,mismatched_control,66,Moderate,66,Moderate,10,0.5512,SCN8A; SCN1A; SCN4A; SCN9A; SCN5A,325790,10,4,0,6,,0,CHEMBL108,MONDO_0005180
+valproic acid,Alzheimer disease,0,mismatched_control,26,Limited,26,Limited,0,0,,457052,10,4,0,6,,0,CHEMBL109,MONDO_0004975
+lamotrigine,rheumatoid arthritis,0,mismatched_control,26,Limited,26,Limited,0,0,,264532,10,4,0,6,,0,CHEMBL741,MONDO_0008383
+lithium,type 1 diabetes mellitus,0,mismatched_control,13,Weak,13,Weak,0,0,,166793,10,2,1,7,,0,CHEMBL1200826,MONDO_0005147
+quetiapine,pulmonary arterial hypertension,0,mismatched_control,12,Weak,12,Weak,0,0,,125633,10,3,2,5,,0,CHEMBL716,MONDO_0015924
+clozapine,breast cancer,0,mismatched_control,13,Weak,13,Weak,0,0,,751073,10,2,1,7,,0,CHEMBL42,MONDO_0007254
+haloperidol,type 2 diabetes mellitus,0,mismatched_control,49,Limited,49,Limited,1,0.5085,DRD2,513101,10,4,0,6,,0,CHEMBL54,MONDO_0005148
+allopurinol,hypercholesterolemia,0,mismatched_control,25,Limited,25,Limited,0,0,,93342,10,5,1,4,,0,CHEMBL1467,HP_0003124
+colchicine,gastroesophageal reflux disease,0,mismatched_control,21,Weak,21,Weak,0,0,,104869,10,4,1,5,,0,CHEMBL107,MONDO_0007186
+febuxostat,major depressive disorder,0,mismatched_control,30,Limited,30,Limited,0,0,,865657,10,5,0,5,,0,CHEMBL1164729,MONDO_0002009
+levothyroxine,major depressive disorder,0,mismatched_control,30,Limited,36,Limited,0,0,,885701,10,5,0,5,UNKNOWN,1,CHEMBL1624,MONDO_0002009
+prednisone,hypertension,0,mismatched_control,26,Limited,32,Limited,0,0,,1000332,10,4,0,6,UNKNOWN,1,CHEMBL635,MONDO_0005044
+azathioprine,hypertension,0,mismatched_control,30,Limited,30,Limited,0,0,,964905,10,5,0,5,,0,CHEMBL1542,MONDO_0005044

@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>BioGraph AI — Biomedical Evidence Explorer</title>
+
+  <meta
+    name="description"
+    content="Explore disease, biological target, drug and literature relationships using public biomedical evidence."
+  />
+
+  <script
+    src="https://unpkg.com/cytoscape@3.30.2/dist/cytoscape.min.js">
+  </script>
+
+  <link
+    rel="stylesheet"
+    href="/static/styles.css?v=10"
+  />
+</head>
+
+
+<body>
+
+  <!-- ============================================
+       BACKGROUND
+  ============================================= -->
+
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+
+  <main class="shell">
+
+    <!-- ============================================
+         NAVBAR
+    ============================================= -->
+
+    <nav class="navbar">
+
+      <div class="brand">
+
+        <div class="brand-icon">
+          B
+        </div>
+
+        <div>
+          <div class="brand-name">
+            BioGraph AI
+          </div>
+
+          <div class="brand-tag">
+            Biomedical Evidence Explorer
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="nav-badges">
+
+        <span class="nav-badge">
+          Open Targets
+        </span>
+
+        <span class="nav-badge">
+          PubMed
+        </span>
+
+        <span class="research-badge">
+          Research Prototype
+        </span>
+
+      </div>
+
+    </nav>
+
+
+    <!-- ============================================
+         HERO
+    ============================================= -->
+
+    <section class="hero">
+
+      <div class="hero-copy">
+
+        <div class="hero-label">
+          INTERACTIVE BIOMEDICAL KNOWLEDGE GRAPH
+        </div>
+
+        <h1>
+          Understand how
+          <span>diseases, genes and drugs</span>
+          connect.
+        </h1>
+
+        <p class="hero-description">
+          BioGraph AI combines public biomedical evidence
+          into an interactive graph so you can explore
+          disease-associated biological targets, clinical
+          candidates and scientific literature in one place.
+        </p>
+
+      </div>
+
+
+      <div class="hero-process">
+
+        <div class="process-step">
+          <span>1</span>
+
+          <div>
+            <strong>Search</strong>
+            <p>Enter a disease.</p>
+          </div>
+        </div>
+
+
+        <div class="process-arrow">
+          →
+        </div>
+
+
+        <div class="process-step">
+          <span>2</span>
+
+          <div>
+            <strong>Explore</strong>
+            <p>Inspect biological targets.</p>
+          </div>
+        </div>
+
+
+        <div class="process-arrow">
+          →
+        </div>
+
+
+        <div class="process-step">
+          <span>3</span>
+
+          <div>
+            <strong>Evaluate</strong>
+            <p>Check drugs and evidence.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ============================================
+         SEARCH
+    ============================================= -->
+
+    <section class="search-section">
+
+      <div class="search-heading">
+
+        <div>
+
+          <p class="mini-label">
+            START EXPLORING
+          </p>
+
+          <h2>
+            What disease do you want to investigate?
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div class="search-box">
+
+        <div class="search-input-wrapper">
+
+          <span class="search-icon">
+            ⌕
+          </span>
+
+          <input
+            id="diseaseInput"
+            value="Parkinson's disease"
+            placeholder="Try Parkinson's disease, breast cancer, Alzheimer's disease..."
+            autocomplete="off"
+          />
+
+        </div>
+
+
+        <button id="searchBtn">
+          <span>Build knowledge graph</span>
+          <span class="button-arrow">→</span>
+        </button>
+
+      </div>
+
+
+      <div class="example-row">
+
+        <span class="example-title">
+          Try:
+        </span>
+
+        <button
+          class="example-chip"
+          data-disease="Parkinson's disease">
+          Parkinson's disease
+        </button>
+
+        <button
+          class="example-chip"
+          data-disease="breast cancer">
+          Breast cancer
+        </button>
+
+        <button
+          class="example-chip"
+          data-disease="Alzheimer disease">
+          Alzheimer's disease
+        </button>
+
+        <button
+          class="example-chip"
+          data-disease="rheumatoid arthritis">
+          Rheumatoid arthritis
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ============================================
+         STATUS + STATS
+    ============================================= -->
+
+    <section class="dashboard-strip">
+
+      <div class="status-area">
+
+        <span
+          id="statusDot"
+          class="status-dot">
+        </span>
+
+        <span id="statusText">
+          Ready to explore
+        </span>
+
+      </div>
+
+
+      <div class="stat-grid">
+
+        <div class="stat-card">
+
+          <span class="stat-number"
+                id="targetCount">
+            0
+          </span>
+
+          <span class="stat-label">
+            biological targets
+          </span>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <span class="stat-number"
+                id="drugCount">
+            0
+          </span>
+
+          <span class="stat-label">
+            matched drugs
+          </span>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <span class="stat-number"
+                id="candidateCount">
+            0
+          </span>
+
+          <span class="stat-label">
+            clinical candidates
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ============================================
+         GRAPH GUIDE
+    ============================================= -->
+
+    <section class="graph-guide">
+
+      <div>
+
+        <p class="mini-label">
+          HOW TO READ THE GRAPH
+        </p>
+
+        <div class="legend">
+
+          <div class="legend-item">
+
+            <span class="legend-node disease-node"></span>
+
+            <div>
+              <strong>Disease</strong>
+              <small>Your starting point</small>
+            </div>
+
+          </div>
+
+
+          <div class="legend-item">
+
+            <span class="legend-node protein-node"></span>
+
+            <div>
+              <strong>Gene / Protein</strong>
+              <small>Biological target</small>
+            </div>
+
+          </div>
+
+
+          <div class="legend-item">
+
+            <span class="legend-node drug-node"></span>
+
+            <div>
+              <strong>Drug</strong>
+              <small>Clinical candidate</small>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="interaction-tip">
+
+        <span class="tip-icon">
+          ✦
+        </span>
+
+        <div>
+          <strong>Tip</strong>
+
+          <p>
+            Click any node to inspect its evidence.
+            Drag nodes to reorganize the graph.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ============================================
+         MAIN WORKSPACE
+    ============================================= -->
+
+    <section class="workspace">
+
+      <!-- GRAPH -->
+
+      <section class="graph-panel">
+
+        <div class="panel-header">
+
+          <div>
+
+            <p class="mini-label">
+              KNOWLEDGE GRAPH
+            </p>
+
+            <h2 id="graphName">
+              Disease evidence network
+            </h2>
+
+          </div>
+
+
+          <div class="graph-controls">
+
+            <button
+              class="control-button"
+              id="fitBtn">
+              Fit graph
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="graph-wrapper">
+
+          <div
+            id="graphLoading"
+            class="graph-loading hidden">
+
+            <div class="loading-spinner"></div>
+
+            <strong>
+              Building biomedical graph
+            </strong>
+
+            <p>
+              Retrieving targets, clinical candidates
+              and evidence...
+            </p>
+
+          </div>
+
+
+          <div id="cy"></div>
+
+        </div>
+
+      </section>
+
+
+      <!-- DETAILS -->
+
+      <aside class="details-panel">
+
+        <div class="details-header">
+
+          <p class="mini-label">
+            EVIDENCE INSPECTOR
+          </p>
+
+          <h2 id="nodeTitle">
+            Select a node
+          </h2>
+
+          <span
+            id="nodeType"
+            class="type-pill">
+            —
+          </span>
+
+        </div>
+
+
+        <div class="explain-card">
+
+          <div class="explain-icon">
+            i
+          </div>
+
+          <p>
+            Click a disease, protein or drug in the graph
+            to see what it represents and why BioGraph
+            connected it.
+          </p>
+
+        </div>
+
+
+        <div
+          id="nodeDescription"
+          class="node-description">
+        </div>
+
+
+        <a
+          id="sourceLink"
+          class="source-link hidden"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          <span>
+            Open original evidence
+          </span>
+
+          <span>
+            ↗
+          </span>
+
+        </a>
+
+
+        <section
+          id="paperSection"
+          class="paper-section hidden">
+
+          <div class="section-divider"></div>
+
+
+          <div class="paper-heading">
+
+            <div>
+
+              <p class="mini-label">
+                SCIENTIFIC LITERATURE
+              </p>
+
+              <h3>
+                Research papers
+              </h3>
+
+            </div>
+
+
+            <span
+              id="paperCount"
+              class="paper-count">
+            </span>
+
+          </div>
+
+
+          <div id="papers">
+          </div>
+
+        </section>
+
+      </aside>
+
+    </section>
+
+
+    <!-- ============================================
+         WHAT THE SCORE MEANS
+    ============================================= -->
+
+    <section class="score-explanation">
+
+      <div class="score-copy">
+
+        <p class="mini-label">
+          EVIDENCE SCORE
+        </p>
+
+        <h2>
+          What does the score mean?
+        </h2>
+
+        <p>
+          BioGraph combines several evidence signals.
+          The score is designed to help compare
+          relationships — it is not a probability that
+          a drug will successfully treat a disease.
+        </p>
+
+      </div>
+
+
+      <div class="score-grid">
+
+        <div class="score-card">
+
+          <div class="score-card-icon">
+            🧬
+          </div>
+
+          <strong>
+            Biological evidence
+          </strong>
+
+          <p>
+            How strongly the drug's targets overlap
+            with disease-associated biology.
+          </p>
+
+        </div>
+
+
+        <div class="score-card">
+
+          <div class="score-card-icon">
+            📚
+          </div>
+
+          <strong>
+            Literature evidence
+          </strong>
+
+          <p>
+            Scientific publications connecting
+            relevant biomedical entities.
+          </p>
+
+        </div>
+
+
+        <div class="score-card">
+
+          <div class="score-card-icon">
+            ◫
+          </div>
+
+          <strong>
+            Clinical evidence
+          </strong>
+
+          <p>
+            Clinical-stage and trial information
+            when available.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ============================================
+         FOOTER
+    ============================================= -->
+
+    <footer>
+
+      <div>
+
+        <strong>
+          BioGraph AI
+        </strong>
+
+        <p>
+          Computational biomedical research prototype.
+        </p>
+
+      </div>
+
+
+      <p class="footer-warning">
+        Research use only — not medical advice.
+        Evidence relationships do not prove treatment efficacy.
+      </p>
+
+    </footer>
+
+  </main>
+
+
+  <script src="/static/app.js?v=10"></script>
+
+</body>
+
+</html>

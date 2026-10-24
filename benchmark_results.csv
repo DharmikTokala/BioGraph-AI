@@ -1,0 +1,21 @@
+drug,disease,label,score,strength,publication_count,clinical_stage,clinical_reports,supportive_count,negative_count,unclear_count,drug_id,disease_id
+trastuzumab,breast cancer,1,54,Moderate,732071,APPROVAL,745,2,0,8,CHEMBL1201585,MONDO_0007254
+imatinib,chronic myeloid leukemia,1,60,Moderate,89607,APPROVAL,103,5,0,5,CHEMBL941,MONDO_0011996
+osimertinib,non-small cell lung carcinoma,1,50,Moderate,231207,APPROVAL,256,8,2,0,CHEMBL3353410,MONDO_0005233
+rituximab,non-Hodgkin lymphoma,1,55,Moderate,115962,APPROVAL,307,7,1,2,CHEMBL1201576,MONDO_0018908
+levodopa,Parkinson disease,1,58,Moderate,336432,APPROVAL,196,4,0,6,CHEMBL1009,MONDO_0005180
+donepezil,Alzheimer disease,1,58,Moderate,430541,APPROVAL,74,4,0,6,CHEMBL502,MONDO_0004975
+adalimumab,rheumatoid arthritis,1,58,Moderate,273698,APPROVAL,164,4,0,6,CHEMBL1201580,MONDO_0008383
+insulin,diabetes mellitus,1,60,Moderate,1329549,APPROVAL,83,5,0,4,CHEMBL1201631,MONDO_0005015
+sildenafil,pulmonary arterial hypertension,1,67,Moderate,126919,PHASE_3,20,3,2,5,CHEMBL192,MONDO_0015924
+tamoxifen,breast cancer,1,56,Moderate,796663,APPROVAL,212,3,0,7,CHEMBL83,MONDO_0007254
+trastuzumab,Parkinson disease,0,38,Limited,297664,,0,4,0,6,CHEMBL1201585,MONDO_0005180
+imatinib,Alzheimer disease,0,38,Limited,449766,,0,4,0,6,CHEMBL941,MONDO_0004975
+osimertinib,rheumatoid arthritis,0,38,Limited,261330,,0,4,0,6,CHEMBL3353410,MONDO_0008383
+rituximab,Parkinson disease,0,38,Limited,339411,,0,4,0,6,CHEMBL1201576,MONDO_0005180
+levodopa,breast cancer,0,36,Limited,770839,,0,3,0,7,CHEMBL1009,MONDO_0007254
+donepezil,chronic myeloid leukemia,0,40,Limited,70382,,0,5,0,5,CHEMBL502,MONDO_0011996
+adalimumab,Alzheimer disease,0,38,Limited,440683,,0,4,0,6,CHEMBL1201580,MONDO_0004975
+insulin,non-Hodgkin lymphoma,0,35,Limited,72608,,0,7,1,2,CHEMBL1201631,MONDO_0018908
+sildenafil,breast cancer,0,34,Limited,741922,,0,2,0,8,CHEMBL192,MONDO_0007254
+tamoxifen,Parkinson disease,0,38,Limited,362256,,0,4,0,6,CHEMBL83,MONDO_0005180
