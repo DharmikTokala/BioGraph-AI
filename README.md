@@ -2,6 +2,8 @@
 
 **An evidence-aware biomedical knowledge graph for exploring disease → biological target → drug relationships.**
 
+Live Demo: https://biograph-ai.onrender.com/
+
 BioGraph AI is an interactive research prototype that combines public biomedical evidence from **Open Targets** and **PubMed** into a visual knowledge graph.
 
 Instead of searching across separate databases, users can enter a disease and explore associated genes/proteins, drugs or clinical candidates, scientific literature, and an interpretable evidence score in one interface.
